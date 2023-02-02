@@ -69,7 +69,7 @@
                 <div class="search-bar">
                     <input type="text" id="search-city"  placeholder="Search Location...">
                     
-                        <button  id="search-button"><span class="material-icons-sharp">
+                        <button  id="search-button" onclick=searchweatherdata()><span class="material-icons-sharp">
                             search
                             </span></button>
                    
@@ -86,15 +86,17 @@
                             <div class="place">
                                 <span class="material-icons-sharp">
                                     place
-                                    </span>
-                                <h2 class="city-name" id="current-city">Ranchi</h2>
-                                <span class="current" id="date">31/01/2023</span>
+                                </span>
+                                
+                                <h2 class="city-name" id="current-city">Loading...</h2>
+                                <span class="current" id="date">--/--/----</span>
+                                <i class="fa fa-star-o" id="star" style="margin-left: 10px;" onclick="setfav()"></i>
                             </div>
                         </div>
                         <div class="mid">
                             
                             
-                            <h1><span class="current" id="temperature">28.06°C</span></h1>
+                            <h1><span class="current" id="temperature">-.- °C</span></h1>
                         </div>
                         
                         
@@ -104,7 +106,7 @@
                    
                    <div id="icon"><img src="https://cdn-icons-png.flaticon.com/512/4343/4343597.png"></div>
                    <div class="description" id="description">
-                       <h3>Cloudy</h3>
+                       <h3 id="desc">Loading...</h3>
                    </div>
                    
                   
@@ -119,7 +121,7 @@
                         <div class="details">
                             <h3>Wind</h3>
                             <h6>Today's Wind Speed</h6>
-                            <h3><span class="current" id="wind-speed">7.4 KM/Hr</span></h3>
+                            <h3><span class="current" id="wind-speed">-- m/s</span></h3>
                         </div>
                         <div class="icon">
                             <img src="https://cdn-icons-png.flaticon.com/512/3731/3731279.png" alt="wind">
@@ -131,7 +133,7 @@
                         <div class="details">
                             <h3>Humidity</h3>
                             <h6>Today's Humidity</h6>
-                            <h3><span class="current" id="humidity">56%</span></h3>
+                            <h3><span class="current" id="humidity">--</span></h3>
                         </div>
                         <div class="icon">
                             <img src="https://icon-library.com/images/humidity-icon/humidity-icon-21.jpg" alt="humidity">
@@ -160,4 +162,6 @@
     </div>
 
 </body>
+<script src="scripts/index.js"></script>
+<script src="https://kit.fontawesome.com/2f3e2a2e4f.js" crossorigin="anonymous"></script>
 </html>
