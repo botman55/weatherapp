@@ -4,6 +4,7 @@
 :root{
     --color-primary:#7380ec;
     --color-light:rgba(132,139,200,0.18);
+    --color-white:white;
     --color-success:#41f1b6;
     --color-warning:#ffbb55;
     --color-info-dark:#7d8da1;
@@ -11,7 +12,7 @@
     --color-dark:#363949;
     --color-dark-variant:#677483;
     --color-primary-variant:#111e88;
-    --color-background:#f6f6f9;
+    --color-background:#b4ddf0;
 
     --card-border-radius:2em;
     --border-radius1:0.4em;
@@ -20,6 +21,8 @@
 
     --card-padding:1.8em;
     --padding-:1.2em;
+
+    --color-card:rgba(255, 255, 255, 0.9);
 
     --box-shadow:0 2em 3em var(--color-light);
 }
@@ -41,8 +44,8 @@ html{
     font-size: 14px;
 }
 h1{
-    font-weight: 800;
-    font-size: 1.8em;
+    font-weight: 700;
+    font-size: 1.4em;
     display: flex;
     
     align-items: center;
@@ -88,7 +91,7 @@ body {
   background-size: cover;
   transition: 500ms;
 
-   /* background:var(--color-background);*/
+   /*background:var(--color-background);*/
     /*background: rgba(0, 0, 0, 0.4);*/
     
 }
@@ -105,11 +108,11 @@ body {
 
 .container{
     display: grid;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
    /* background:#41f1b6;*/
     gap: 1.8em;
-    grid-template-columns: 13em auto 4em;
+    grid-template-columns: 13em auto 20em;
 }
 
 a{
@@ -138,3 +141,4 @@ b{
 .warning{
     color: var(--color-warning);
 }
+

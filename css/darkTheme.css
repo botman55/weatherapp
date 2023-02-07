@@ -1,0 +1,9 @@
+.dark-theme-variables{
+    --color-background: #121212;
+    --color-white:#202528;
+    --color-dark:#edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light:rgba(0,0,0,0.4);
+    --box-shadow: 0 2em 3em var(--color-light);
+    --color-card: rgba(20,25,28,0.9);
+}

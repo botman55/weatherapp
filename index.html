@@ -7,19 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/animationStyle.css">
     <link rel="stylesheet" href="css/asideStyle.css">
     <!--material icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet">
       <link rel="stylesheet" href="css/mainStyle.css">
+      <link rel="stylesheet" href="css/rightStyle.css">
+      <link rel="stylesheet" href="css/darkTheme.css">
+      
+      
 </head>
 <body>
     <div class="container">
+        
         <aside>
             <div class="top">
                 <div class="logo">
                     <img src="https://cdn-icons-png.flaticon.com/512/1163/1163763.png" alt="logo">
-                    <h1> <strong>Weather</strong></h1>
+                    <h1> Weather</h1>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">close</span>
@@ -62,10 +68,10 @@
             </div>
         </aside>
 
-
+<!--Main mid part-->
         <main>
             <h1>Dashboard</h1>
-            <div class="search">
+            <!--div class="search"-->
                 <div class="search-bar">
                     <input type="text" id="search-city"  placeholder="Search Location...">
                     
@@ -74,7 +80,7 @@
                             </span></button>
                    
                 </div>
-            </div>
+            <!--/div-->
             <div class="card">
                 <div class="left-side">
                     <div class="city-temp">
@@ -98,7 +104,9 @@
                             
                             <h1><span class="current" id="temperature">-.- °C</span></h1>
                         </div>
-                        
+                        <div class="bottom">
+                            <h4><span class="feels" id="feels">Loading... </span></h4>
+                        </div>
                         
                     </div>
                 </div>
@@ -108,7 +116,7 @@
                    <div class="description" id="description">
                        <h3 id="desc">Loading...</h3>
                    </div>
-                   
+               
                   
                 </div>
 
@@ -147,21 +155,176 @@
                         <div class="details">
                             <h3>UV-Index</h3>
                             <h6>Today's UV-Index</h6>
-                            <h3><span class="current" id="uv-index">8.21</span></h3>
+                            <h3><span class="current" id="uv-index">--</span></h3>
                         </div>
                         <div class="icon">
                             <img src="https://cdn-icons-png.flaticon.com/512/3512/3512031.png" alt="uv-index">
                         </div>
                     </div>
 
+                    <div class="pressure">
+                        
+                        <div class="details">
+                            <h3>Pressure</h3>
+                            <h6>Today's Pressure</h6>
+                            <h3><span class="current" id="pressure">--</span></h3>
+                        </div>
+                        <div class="icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4005/4005827.png" alt="uv-index">
+                        </div>
+                    </div>
+
+                    <div class="visibility">
+                        
+                        <div class="details">
+                            <h3>Visibility</h3>
+                            <h6>Today's Visibility</h6>
+                            <h3><span class="current" id="visibility">--</span></h3>
+                        </div>
+                        <div class="icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5263/5263154.png" alt="uv-index">
+                        </div>
+                    </div>
                 
             </div>
         
         </main>
 
+
+<!--Right side-->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <h1>Dashboard</h1>
+                <div class="theme-toggle">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h2>This Week</h2>
+                <div class="today" id="current-temp">
+                    
+                    <div class="wDay">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163763.png" alt="weather-icon" class="" id="todayIcon">
+                        <h2>Today</h2>
+                    </div>
+                    <div>
+                        <div class="today-items">
+                            <div><h3>Min</h3></div>
+                            <div class="temp"><h3>15°C</h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Max</h3></div>
+                            <div class="temp"><h3>27°C</h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Sunrise</h3></div>
+                            <div class="temp"><h3>06:00 am</h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Sunset</h3></div>
+                            <div class="temp"><h3>06:00 pm</h3></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="weather-forecast" id="weather-forecast">
+                    <div class="weather-forecast-item">
+                        <img src="" alt="weather-icon" class="w-icon">
+                        <div class="day"><h5>Tommorow</h5></div>
+                        <div class="temp"><h5>Min  15°C</h5></div>
+                        <div class="temp"><h5>Max 27°C</h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <img src="" alt="weather-icon" class="w-icon">
+                        <div class="day"><h5>Tuesday</h5></div>
+                        <div class="temp"><h5>Min  15°C</h5></div>
+                        <div class="temp"><h5>Max  27°C</h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <img src="" alt="weather-icon" class="w-icon">
+                        <div class="day"><h5>Wednesday</h5></div>
+                        <div class="temp"><h5>Min  15°C</h5></div>
+                        <div class="temp"><h5>Max  27°C</h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <img src="" alt="weather-icon" class="w-icon">
+                        <div class="day"><h5>Thursday</h5></div>
+                        <div class="temp"><h5>Min  15°C</h5></div>
+                        <div class="temp"><h5>Max  27°C</h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <img src="" alt="weather-icon" class="w-icon">
+                        <div class="day"><h5>Friday</h5></div>
+                        <div class="temp"><h5>Min  15°C</h5></div>
+                        <div class="temp"><h5>Max  27°C</h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <img src="" alt="weather-icon" class="w-icon">
+                        <div class="day"><h5>Saturday</h5></div>
+                        <div class="temp"><h5>Min  15°C</h5></div>
+                        <div class="temp"><h5>Max  27°C</h5></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
+
+
+<!--Animation part-->
+    <div class="bg">
+        <div class="mountain">
+          <div class="mountain-top">
+            <div class="mountain-cap-1"></div>
+            <div class="mountain-cap-2"></div>
+            <div class="mountain-cap-3"></div>
+          </div>
+        </div>
+        <div class="mountain-two">
+          <div class="mountain-top">
+            <div class="mountain-cap-1"></div>
+            <div class="mountain-cap-2"></div>
+            <div class="mountain-cap-3"></div>
+          </div>
+        </div>
+         <div class="mountain-three">
+          <div class="mountain-top">
+            <div class="mountain-cap-1"></div>
+            <div class="mountain-cap-2"></div>
+            <div class="mountain-cap-3"></div>
+          </div>
+        </div>
+        <div class="mountain-four">
+            <div class="mountain-top">
+              <div class="mountain-cap-1"></div>
+              <div class="mountain-cap-2"></div>
+              <div class="mountain-cap-3"></div>
+            </div>
+          </div>
+          <div class="mountain-five">
+            <div class="mountain-top">
+              <div class="mountain-cap-1"></div>
+              <div class="mountain-cap-2"></div>
+              <div class="mountain-cap-3"></div>
+            </div>
+          </div>
+        <div class="cloud" id="cloud"></div>
+        <div class="cloud" id="cloud-2"></div>
+        <div class="cloud" id="cloud-3"></div>
+    </div> 
 
 </body>
 <script src="scripts/index.js"></script>
+<script src="scripts/ui.js"></script>
 <script src="https://kit.fontawesome.com/2f3e2a2e4f.js" crossorigin="anonymous"></script>
 </html>

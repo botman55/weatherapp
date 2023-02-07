@@ -55,15 +55,15 @@ function setvals(data){
     document.getElementById('date').innerText=format;
     document.getElementById('wind-speed').innerText=`${data.wind.speed} m/s`;
     document.getElementById('humidity').innerText=`${data.main.humidity} %`
-    // document.getElementById('row2').innerHTML=`Real feel: ${Math.round(((data.main.feels_like)-273)*10)/10} Deg C`;
-    // document.getElementById('row3').innerHTML=`Maximum temp: ${Math.round(((data.main.temp_max)-273)*10)/10} Deg C`;
-    // document.getElementById('row4').innerHTML=`Minimum temp: ${Math.round(((data.main.temp_min)-273)*10)/10} Deg C`;
-    // document.getElementById('row5').innerHTML=`Humidity: ${Math.round(data.main.humidity)} % `;
+    document.getElementById('feels').innerText=`Feels Like ${Math.round(((data.main.feels_like)-273)*10)/10} °C`;
+    //document.getElementById('maxTemp').innerText=`Max temperature: ${Math.round(((data.main.temp_max)-273)*10)/10} °C`;
+    //document.getElementById('minTemp').innerText=`Min temperature: ${Math.round(((data.main.temp_min)-273)*10)/10} °C`;
+    //document.getElementById('uv-index').innerText=`${data.coord.lon,data.coord.lat}`;
     document.getElementById('desc').innerText=`${data.weather[0].main}`;
-    // document.getElementById('row7').innerHTML=`Visibility: ${data.visibility} meters`;
-    // document.getElementById('row8').innerHTML=`Pressure: ${data.main.pressure} pa`;
-    // document.getElementById('row9').innerHTML=`Sunrise: ${data.sys.sunrise} am`;
-    // document.getElementById('row10').innerHTML=`Sunset: ${data.sys.sunset} pm`;
+    document.getElementById('visibility').innerText=`${data.visibility} m`;
+    document.getElementById('pressure').innerText=`${data.main.pressure} pa`;
+    //document.getElementById('sunrise').innerHTML=`Sunrise: ${data.sys.sunrise} am`;
+    //document.getElementById('sunset').innerHTML=`Sunset: ${data.sys.sunset} pm`;
 
 }
 function setdate(data){
