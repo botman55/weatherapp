@@ -20,12 +20,13 @@ const getweather = async (city) => {
     const response = await fetch(url);
     data = await response.json();
     console.log(data);
-    setvals(data);
-
+    
     const url2 = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey2}&q=${city}&days=7`
     const response2 = await fetch(url2);
     let data2 = await response2.json();
     console.log(data2);
+
+    setvals(data,data2);
     fivedays(data2);
 }
 
@@ -56,23 +57,24 @@ function begin() {
 }
 // getweather(cn);
 begin();
-function setvals(data) {
-    var format = setdate(data);
+function setvals(data,data2) {
+    var format = setdate(data2);
     document.getElementById('current-city').innerText = `${data.name}`
     document.getElementById('temperature').innerText = `${Math.round(((data.main.temp) - 273) * 10) / 10} °C`;
     document.getElementById('date').innerText = format;
     document.getElementById('wind-speed').innerText = `${data.wind.speed} m/s`;
     document.getElementById('humidity').innerText = `${data.main.humidity} %`
     document.getElementById('feels').innerText = `Feels Like ${Math.round(((data.main.feels_like) - 273) * 10) / 10} °C`;
-    document.getElementById('desc').innerText = `${data.weather[0].main}`;
+    document.getElementById('desc').innerText = `${data2.current.condition.text}`;
     document.getElementById('visibility').innerText = `${data.visibility} m`;
     document.getElementById('pressure').innerText = `${data.main.pressure} pa`;
 
 }
 function setdate(data) {
-    let unix = data.sys.sunrise;
-    var date = new Date(unix * 1000);
-    var format = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+    let a=`${data.forecast.forecastday[0].date_epoch}`;
+    var date=Date(a);
+    d=date.toString().split(" ");
+    format=d[0]+", "+d[1]+" "+d[2]+", "+d[3];
     return format;
 }
 function searchweatherdata() {
@@ -161,7 +163,7 @@ function fivedays(data) {
     document.getElementById('today_sunrise').innerText = `${data.forecast.forecastday[0].astro.sunrise}`;
     document.getElementById('today_sunset').innerText = `${data.forecast.forecastday[0].astro.sunset}`;
     document.getElementById('todayIcon').innerHTML=`<img src="https:${data.forecast.forecastday[0].day.condition.icon}">`;
-    document.getElementById('icon').innerHTML=`<img src="https:${data.forecast.forecastday[0].day.condition.icon}">`;
+    document.getElementById('icon').innerHTML=`<img src="https:${data.current.condition.icon}">`;
     
     document.getElementById('tempMin1').innerText = `${data.forecast.forecastday[1].day.mintemp_c}°C`;
     document.getElementById('tempMax1').innerText = `${data.forecast.forecastday[1].day.maxtemp_c}°C`;
