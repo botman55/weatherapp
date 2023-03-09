@@ -142,3 +142,27 @@ b{
     color: var(--color-warning);
 }
 
+#preloader{
+    background: grey url(/gifs/load.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    animation-name: ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes ani{
+    0%{
+        background-color: rgb(67, 176, 219);
+    }
+    25%{
+        background-color: rgb(108, 149, 156);
+    }
+    50%{
+        background-color: rgb(120, 129, 131);
+    }
+    75%{
+        background-color: rgb(103, 106, 107);
+    }
+}

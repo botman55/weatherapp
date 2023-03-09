@@ -15,10 +15,15 @@
       <link rel="stylesheet" href="css/mainStyle.css">
       <link rel="stylesheet" href="css/rightStyle.css">
       <link rel="stylesheet" href="css/darkTheme.css">
-      
+      <link rel="stylesheet" href="css/lightTheme.css">
       
 </head>
 <body>
+
+    <div id="preloader">
+
+    </div>
+
     <div class="container">
         
         <aside>
@@ -131,7 +136,7 @@
                             <h6>Today's Wind Speed</h6>
                             <h3><span class="current" id="wind-speed">-- m/s</span></h3>
                         </div>
-                        <div class="icon">
+                        <div class="icon" id="wind">
                             <img src="https://cdn-icons-png.flaticon.com/512/3731/3731279.png" alt="wind">
                         </div>
                     </div>
@@ -143,7 +148,7 @@
                             <h6>Today's Humidity</h6>
                             <h3><span class="current" id="humidity">--</span></h3>
                         </div>
-                        <div class="icon">
+                        <div class="icon" id="humid">
                             <img src="https://icon-library.com/images/humidity-icon/humidity-icon-21.jpg" alt="humidity">
                         </div>
                     </div>
@@ -157,7 +162,7 @@
                             <h6>Today's UV-Index</h6>
                             <h3><span class="current" id="uv-index">--</span></h3>
                         </div>
-                        <div class="icon">
+                        <div class="icon" id="uv">
                             <img src="https://cdn-icons-png.flaticon.com/512/3512/3512031.png" alt="uv-index">
                         </div>
                     </div>
@@ -169,7 +174,7 @@
                             <h6>Today's Pressure</h6>
                             <h3><span class="current" id="pressure">--</span></h3>
                         </div>
-                        <div class="icon">
+                        <div class="icon" id="press">
                             <img src="https://cdn-icons-png.flaticon.com/512/4005/4005827.png" alt="uv-index">
                         </div>
                     </div>
@@ -181,7 +186,7 @@
                             <h6>Today's Visibility</h6>
                             <h3><span class="current" id="visibility">--</span></h3>
                         </div>
-                        <div class="icon">
+                        <div class="icon" id="visi">
                             <img src="https://cdn-icons-png.flaticon.com/512/5263/5263154.png" alt="uv-index">
                         </div>
                     </div>
@@ -202,8 +207,8 @@
                 </button>
                 <h1>Dashboard</h1>
                 <div class="theme-toggle">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
+                    <span class="material-icons-sharp limode active">light_mode</span>
+                    <span class="material-icons-sharp drmode">dark_mode</span>
                 </div>
             </div>
 
@@ -323,8 +328,15 @@
         <div class="cloud" id="cloud-3"></div>
     </div> 
 
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/DnBgFzTMH6s?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </body>
 <script src="scripts/index.js"></script>
 <script src="scripts/ui.js"></script>
 <script src="https://kit.fontawesome.com/2f3e2a2e4f.js" crossorigin="anonymous"></script>
+<script>
+    var loader=document.getElementById("preloader");
+    window.addEventListener("load",function(){
+        loader.style.display="none";
+    })
+</script>
 </html>

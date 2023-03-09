@@ -1,0 +1,9 @@
+.light-theme-variables{
+    --color-background:#b4ddf0;
+    --color-white:white;
+    --color-dark:#363949;
+    --color-dark-variant:#677483;
+    --color-light:rgba(132,139,200,0.18);
+    --box-shadow:0 2em 3em var(--color-light);
+    --color-card:rgba(255, 255, 255, 0.9);
+}
