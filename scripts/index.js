@@ -81,6 +81,14 @@ function searchweatherdata() {
     getweather(city);
     document.getElementById('search-city').value = '';
 }
+const searchBox=document.getElementById('search-city');
+searchBox.addEventListener('keydown',function(e) {
+    if(e.key=='Enter'){
+        searchweatherdata();
+    }
+});
+
+
 function setfav() {
     let element = document.getElementById('star');
     let status;
@@ -106,7 +114,7 @@ function setfav() {
 function fivedays(data) {
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     
-    document.getElementById('today_min').innerText = `${data.forecast.forecastday[0].day.mintemp_c} °C`;
+   /* document.getElementById('today_min').innerText = `${data.forecast.forecastday[0].day.mintemp_c} °C`;
     document.getElementById('today_max').innerText = `${data.forecast.forecastday[0].day.maxtemp_c} °C`;
     document.getElementById('today_sunrise').innerText = `${data.forecast.forecastday[0].astro.sunrise}`;
     document.getElementById('today_sunset').innerText = `${data.forecast.forecastday[0].astro.sunset}`;
@@ -144,6 +152,48 @@ function fivedays(data) {
 
     document.getElementById('tempMin6').innerText = `${data.forecast.forecastday[6].day.mintemp_c} °C`;
     document.getElementById('tempMax6').innerText = `${data.forecast.forecastday[6].day.maxtemp_c} °C`;
+    document.getElementById('wicon6').innerHTML=`<img src="https:${data.forecast.forecastday[6].day.condition.icon}">`;
+    let e=new Date(`${data.forecast.forecastday[6].date}`);
+    document.getElementById('day6').innerText = `${weekday[e.getDay()]}`;*/
+
+    document.getElementById('today_min').innerText = `${data.forecast.forecastday[0].day.mintemp_c}°C`;
+    document.getElementById('today_max').innerText = `${data.forecast.forecastday[0].day.maxtemp_c}°C`;
+    document.getElementById('today_sunrise').innerText = `${data.forecast.forecastday[0].astro.sunrise}`;
+    document.getElementById('today_sunset').innerText = `${data.forecast.forecastday[0].astro.sunset}`;
+    document.getElementById('todayIcon').innerHTML=`<img src="https:${data.forecast.forecastday[0].day.condition.icon}">`;
+    document.getElementById('icon').innerHTML=`<img src="https:${data.forecast.forecastday[0].day.condition.icon}">`;
+    
+    document.getElementById('tempMin1').innerText = `${data.forecast.forecastday[1].day.mintemp_c}°C`;
+    document.getElementById('tempMax1').innerText = `${data.forecast.forecastday[1].day.maxtemp_c}°C`;
+    document.getElementById('wicon1').innerHTML=`<img src="https:${data.forecast.forecastday[1].day.condition.icon}">`;
+    document.getElementById('day1').innerText = `Tomorrow`;
+
+    document.getElementById('tempMin2').innerText = `${data.forecast.forecastday[2].day.mintemp_c}°C`;
+    document.getElementById('tempMax2').innerText = `${data.forecast.forecastday[2].day.maxtemp_c}°C`;
+    document.getElementById('wicon2').innerHTML=`<img src="https:${data.forecast.forecastday[2].day.condition.icon}">`;
+    let a=new Date(`${data.forecast.forecastday[2].date}`);
+    document.getElementById('day2').innerText = `${weekday[a.getDay()]}`;
+
+    document.getElementById('tempMin3').innerText = `${data.forecast.forecastday[3].day.mintemp_c}°C`;
+    document.getElementById('tempMax3').innerText = `${data.forecast.forecastday[3].day.maxtemp_c}°C`;
+    document.getElementById('wicon3').innerHTML=`<img src="https:${data.forecast.forecastday[3].day.condition.icon}">`;
+    let b=new Date(`${data.forecast.forecastday[3].date}`);
+    document.getElementById('day3').innerText = `${weekday[b.getDay()]}`;
+
+    document.getElementById('tempMin4').innerText = `${data.forecast.forecastday[4].day.mintemp_c}°C`;
+    document.getElementById('tempMax4').innerText = `${data.forecast.forecastday[4].day.maxtemp_c}°C`;
+    document.getElementById('wicon4').innerHTML=`<img src="https:${data.forecast.forecastday[4].day.condition.icon}">`;
+    let c=new Date(`${data.forecast.forecastday[4].date}`);
+    document.getElementById('day4').innerText = `${weekday[c.getDay()]}`;
+
+    document.getElementById('tempMin5').innerText = `${data.forecast.forecastday[5].day.mintemp_c}°C`;
+    document.getElementById('tempMax5').innerText = `${data.forecast.forecastday[5].day.maxtemp_c}°C`;
+    document.getElementById('wicon5').innerHTML=`<img src="https:${data.forecast.forecastday[5].day.condition.icon}">`;
+    let d=new Date(`${data.forecast.forecastday[5].date}`);
+    document.getElementById('day5').innerText = `${weekday[d.getDay()]}`;
+
+    document.getElementById('tempMin6').innerText = `${data.forecast.forecastday[6].day.mintemp_c}°C`;
+    document.getElementById('tempMax6').innerText = `${data.forecast.forecastday[6].day.maxtemp_c}°C`;
     document.getElementById('wicon6').innerHTML=`<img src="https:${data.forecast.forecastday[6].day.condition.icon}">`;
     let e=new Date(`${data.forecast.forecastday[6].date}`);
     document.getElementById('day6').innerText = `${weekday[e.getDay()]}`;

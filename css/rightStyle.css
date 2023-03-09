@@ -86,7 +86,7 @@
     display: flex;
     gap: 1em;
     background: var(--color-white);
-    padding: 1em;
+    padding: 1.5em;
     border-radius: var(--border-radius3);
     box-shadow: var(--box-shadow);
     margin-bottom: 00.4em;
@@ -101,6 +101,7 @@
     width: 15%;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
 }
 .right .forecast .weather-forecast .weather-forecast-item .w-icon{

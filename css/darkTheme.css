@@ -6,6 +6,13 @@
     --color-light:rgba(0,0,0,0.4);
     --box-shadow: 0 2em 3em var(--color-light);
     --color-card: rgba(20,25,28,0.9);
+
+    --cloud-color: #515152;
+    --mountain-color:#2e4652;
+    --mountain-top:#5f6b70;
+}
+.inverted{
+    filter: invert(100%);
 }
 /* #wind,#humid,#uv,#press,#visi{
     filter: invert(1);

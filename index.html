@@ -15,7 +15,7 @@
       <link rel="stylesheet" href="css/mainStyle.css">
       <link rel="stylesheet" href="css/rightStyle.css">
       <link rel="stylesheet" href="css/darkTheme.css">
-      <link rel="stylesheet" href="css/lightTheme.css">
+      <!--link rel="stylesheet" href="css/lightTheme.css"-->
       
 </head>
 <body>
@@ -43,32 +43,13 @@
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="#thisWeek" class ="" id="weekForecast">
                     <span class="material-icons-sharp">
                         date_range
                         </span>
-                    <h3>5 Day Forecast</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        location_city
-                        </span>
-                    <h3>Recent Location</h3>
-                    <a href="">
-                    
-                        <ul class="list-group">
-
-                        </ul>
-                   
+                    <h3>This Week Forecast</h3>
                 </a>
                 
-                
-                <a href="#" id="clear-history">
-                    <span class="material-icons-sharp">
-                        clear_all
-                        </span>
-                    <h3>Clear History</h3>
-                </a>
                 
             </div>
         </aside>
@@ -137,7 +118,7 @@
                             <h3><span class="current" id="wind-speed">-- m/s</span></h3>
                         </div>
                         <div class="icon" id="wind">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3731/3731279.png" alt="wind">
+                            <img  id="wIcon" src="https://cdn-icons-png.flaticon.com/512/3731/3731279.png" alt="wind">
                         </div>
                     </div>
 
@@ -149,7 +130,7 @@
                             <h3><span class="current" id="humidity">--</span></h3>
                         </div>
                         <div class="icon" id="humid">
-                            <img src="https://icon-library.com/images/humidity-icon/humidity-icon-21.jpg" alt="humidity">
+                            <img  id="wIcon" src="https://icon-library.com/images/humidity-icon/humidity-icon-21.jpg" alt="humidity">
                         </div>
                     </div>
                 
@@ -163,7 +144,7 @@
                             <h3><span class="current" id="uv-index">--</span></h3>
                         </div>
                         <div class="icon" id="uv">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3512/3512031.png" alt="uv-index">
+                            <img  id="wIcon" src="https://cdn-icons-png.flaticon.com/512/3512/3512031.png" alt="uv-index">
                         </div>
                     </div>
 
@@ -175,7 +156,7 @@
                             <h3><span class="current" id="pressure">--</span></h3>
                         </div>
                         <div class="icon" id="press">
-                            <img src="https://cdn-icons-png.flaticon.com/512/4005/4005827.png" alt="uv-index">
+                            <img  id="wIcon" src="https://cdn-icons-png.flaticon.com/512/4005/4005827.png" alt="uv-index">
                         </div>
                     </div>
 
@@ -187,10 +168,23 @@
                             <h3><span class="current" id="visibility">--</span></h3>
                         </div>
                         <div class="icon" id="visi">
-                            <img src="https://cdn-icons-png.flaticon.com/512/5263/5263154.png" alt="uv-index">
+                            <img  id="wIcon" src="https://cdn-icons-png.flaticon.com/512/5263/5263154.png" alt="uv-index">
                         </div>
                     </div>
-                
+                    
+                    <div class="percipitation">
+                        
+                        <div class="details">
+                            <h3>Percipitation</h3>
+                            <h6>Today's Percipitation</h6>
+                            <h3><span class="current" id="ppt">--</span></h3>
+                        </div>
+                        <div class="icon" id="preci">
+                            <img  id="wIcon"  src="https://icons-for-free.com/iconfiles/png/512/clouds+rain+rainy+weather+icon-1320196492721656738.png" alt="uv-index">
+                        </div>
+                    </div>
+
+
             </div>
         
         </main>
@@ -212,7 +206,7 @@
                 </div>
             </div>
 
-            <div class="forecast">
+            <!--div class="forecast">
                 <h2>This Week</h2>
                 <div class="today" id="current-temp">
                     
@@ -278,6 +272,76 @@
                         <div class="temp" id="tempMax6"><h5>Max  27°C</h5></div>
                     </div>
                 </div>
+            </div-->
+
+            <div class="forecast" id="thisWeek">
+                <h2>This Week</h2>
+                <div class="today" id="current-temp">
+                    
+                    <div class="wDay" id="todayIcon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163763.png" alt="weather-icon" class="" >
+                        
+                    </div>
+                    <h2>Today</h2>
+                    <div>
+                        <div class="today-items">
+                            <div><h3>Min</h3></div>
+                            <div class="temp" id="today_min"><h3>-</h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Max</h3></div>
+                            <div class="temp" id="today_max"><h3>-</h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Sunrise</h3></div>
+                            <div class="temp" id="today_sunrise"><h3>--:--</h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Sunset</h3></div>
+                            <div class="temp" id="today_sunset"><h3>--:--</h3></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="weather-forecast" id="weather-forecast">
+                    <div class="weather-forecast-item">
+                        <div id="wicon1"><img src="" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day1">_</span></h5></div>
+                        
+                        <div class="temp"><h5>Min <span id="tempMin1">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax1">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon2"><img src="" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day2">_</span></h5></div>
+                        <div class="temp" ><h5>Min <span id="tempMin2">-</span></h5></div>
+                        <div class="temp" ><h5>Max <span id="tempMax2">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon3"><img src="" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day3">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin3">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax3">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon4"><img src="" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day4">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin4">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax4">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon5"><img src="" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day5">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin5">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax5">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon6"><img src="" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day6">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin6">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax6">-</span></h5></div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -326,6 +390,7 @@
         <div class="cloud" id="cloud"></div>
         <div class="cloud" id="cloud-2"></div>
         <div class="cloud" id="cloud-3"></div>
+        <div class="cloud" id="cloud-4"></div>
     </div> 
 
     <iframe width="0" height="0" src="https://www.youtube.com/embed/DnBgFzTMH6s?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
