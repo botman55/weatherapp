@@ -14,6 +14,3 @@
 .inverted{
     filter: invert(100%);
 }
-/* #wind,#humid,#uv,#press,#visi{
-    filter: invert(1);
-} */

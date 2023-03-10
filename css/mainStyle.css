@@ -39,12 +39,7 @@ main .city-temp .bottom{
     margin-bottom: 1em;
 }
 
-/*#date{
-   
-    margin-top: 1em;
-    padding: 0.5em 0.6em;
-    
-}*/
+
 main .card{
     display: flex;
     background: var(--color-white);
@@ -54,17 +49,15 @@ main .card{
    
     height: 300px;
     width: 100%;    
-    /*background-image: url(https://marketplace.canva.com/EAFDL6gbGVM/1/0/1600w/canva-green-minimalist-illustrated-landscape-desktop-wallpaper-UwgW9eDIQrQ.jpg);*/
+    
 }
 
 main .card .city-temp > div{
     display: grid;
     grid-template-rows: (3,1fr);
-    /*box-shadow: var(--box-shadow);*/
+    
 }
-/*main .card .top-lft{
-    display: flex;
-}*/
+
 main .card .right-side{
     display: block;
     margin-left: auto;
@@ -138,9 +131,7 @@ main h1{
         padding: 0 1em;
     }
     main h1{
-        display: none;
-    /*    margin:0;
-        font-size: 0;*/
+        display: none; 
     }
     main .mid h1{
         display: inline-block;
